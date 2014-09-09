@@ -82,6 +82,7 @@ a:link, a:hover, a:active, a:visited {
 }
 
 #head { 
+    padding-bottom: 100px;
 	background: url('../img/front-img.jpg') 50% 0 fixed;
 	min-height: 1020px; 
 	height: 1020px; 
@@ -89,6 +90,11 @@ a:link, a:hover, a:active, a:visited {
     display: -webkit-flex; 
     display: -ms-flexbox; 
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -131,6 +137,11 @@ a:link, a:hover, a:active, a:visited {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 1200px;
 }
 
 .smaller {
@@ -139,8 +150,8 @@ a:link, a:hover, a:active, a:visited {
 
 #about { 
 	background: url('../img/dpwedding-bg.jpg') 50% 0 fixed;
-	min-height: 1000px; 
-	height: 1000px; 
+	min-height: 800px; 
+	height: 800px; 
     padding-top: 70px;
 }
  
@@ -210,6 +221,7 @@ a:link, a:hover, a:active, a:visited {
 	width: 100%;
 	font-size: 4em;
 	color: white;
+    
 }
 
 #contact h2 {
