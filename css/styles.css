@@ -1,0 +1,283 @@
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Rock Salt', cursive;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a:link, a:hover, a:active, a:visited {
+    text-decoration: none;
+}
+
+#language-background {
+    right: 0;
+    position: fixed;
+    height: 40px;
+    width: 240px;
+    border-bottom-left-radius: 10px;
+    background-color: white;
+    opacity: 0.8;
+    z-index: 9;
+}
+
+.language-bar {
+    position: fixed;
+    overflow: hidden;
+    right: 0px;
+    z-index: 10;
+    border-bottom-left-radius: 10px;
+}
+
+.language-bar ul {
+    height: 40px;
+    width: 240px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.language {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-right: 1px solid black;
+}
+
+.language:hover {
+    cursor: pointer;
+}
+
+.pages {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+}
+
+#head { 
+	background: url('../img/front-img.jpg') 50% 0 fixed;
+	min-height: 1020px; 
+	height: 1020px; 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -ms-flexbox; 
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#head article { 
+	color: white;
+	font-size: 6em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.name {
+    height: 170px; 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -ms-flexbox; 
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.smaller {
+    font-size: 4.5rem;
+}
+
+#about { 
+	background: url('../img/dpwedding-bg.jpg') 50% 0 fixed;
+	min-height: 1000px; 
+	height: 1000px; 
+    padding-top: 70px;
+}
+ 
+#about article { 
+	position: absolute; 
+	text-align: center; 
+	top: 500px; 
+	width: 100%; 
+	color: black;
+	font-size: 4em;
+}
+
+.about-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.about-nav li {
+    height: 70px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 2em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.about-nav li:hover {
+    cursor: pointer;
+    border: 3px solid #333333;
+}
+ 
+#contact { 
+    border-top: 5px solid #999999;
+	background: url('../img/contact-bg.png') 50% 100% repeat-x fixed;
+	min-height: 700px; 
+	height: 700px; 
+    padding-top: 30px;
+}
+ 
+#contact article { 
+	position: absolute; 
+	text-align: center; 
+	top: 300px; 
+	width: 100%;
+	font-size: 4em;
+	color: white;
+}
+
+#contact h2 {
+    margin-left: 80px;
+    font-size: 3.5em;
+}
+
+#contact-space {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+#contact-content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#contact-space .spacer {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#icon-wrapper {
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+#hidden-message {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2.5em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
