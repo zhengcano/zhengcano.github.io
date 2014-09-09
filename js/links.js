@@ -20,4 +20,20 @@ $(function () {
     showContact('#icon3', '#msg3');
     showContact('#icon4', '#msg4');
     
+    function changeAbout(link, show, image, color) {
+        var $link = $(link);
+        var $show = $(show);
+        
+        $link.click(function(){
+            $('#about').css('background-image', "url('" + image + "')");
+            $('.about-nav li').css('color', color)
+            
+
+        });
+    }
+    
+    changeAbout('#about1', 'show', 'img/background-test.jpg', '#acacae');
+    changeAbout('#about2', 'show', 'img/dpwedding-bg.jpg', 'black');
+    changeAbout('#about3', 'show', 'img/swagwise-bg.jpg', 'black');
+    
 });

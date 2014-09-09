@@ -160,7 +160,6 @@ a:link, a:hover, a:active, a:visited {
 	text-align: center; 
 	top: 500px; 
 	width: 100%; 
-	color: black;
 	font-size: 4em;
 }
 
@@ -199,7 +198,7 @@ a:link, a:hover, a:active, a:visited {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #a1a1a3;
+    color: #acacae;
 }
 
 .about-nav li:hover {
