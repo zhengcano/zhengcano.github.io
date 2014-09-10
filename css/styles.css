@@ -3,7 +3,12 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+}
+
 body {
+    width: 100%;
     font-size: 1em;
     font-family: 'Rock Salt', cursive;
 }
@@ -67,7 +72,7 @@ a:link, a:hover, a:active, a:visited {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    border-right: 1px solid black;
+    border-right: 1px solid #999999;
 }
 
 .language:hover {
@@ -128,7 +133,8 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .name {
-    height: 170px; 
+    text-align: center;
+    min-height: 170px; 
     display: -webkit-box; 
     display: -webkit-flex; 
     display: -ms-flexbox; 
@@ -141,11 +147,12 @@ a:link, a:hover, a:active, a:visited {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 1200px;
+    width: 100%;
 }
 
 .smaller {
     font-size: 4.5rem;
+    text-align: center;
 }
 
 #about { 
@@ -173,18 +180,13 @@ a:link, a:hover, a:active, a:visited {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
 }
 
 .about-nav li {
     height: 70px;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
     font-size: 2em;
     display: -webkit-box;
     display: -webkit-flex;
@@ -198,12 +200,14 @@ a:link, a:hover, a:active, a:visited {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #acacae;
+    color: #e1e1e4;
+    -webkit-transition: font-size 500ms ease-in-out;
+    transition: font-size 500ms ease-in-out; 
 }
 
 .about-nav li:hover {
     cursor: pointer;
-    border: 3px solid #a1a1a3;
+    font-size: 2.2em;
 }
  
 #contact { 
@@ -264,6 +268,45 @@ a:link, a:hover, a:active, a:visited {
 
 .icon {
     font-size: 1.5rem;
+    -webkit-transition: opacity 500ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
+}
+
+.icon:hover {
+    opacity: 0.5;
+}
+
+#icon1 a{
+    color: #333333;
+}
+
+#icon2 a{
+    color: #0077B5;
+}
+
+#icon3 a{
+    color: #55ACEE;
+}
+
+#icon4 a{
+    color: #4F93FF;
+}
+
+#contact-images{
+    opacity: 0.7;
+    margin-top: 5px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #hidden-message {
