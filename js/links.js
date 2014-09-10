@@ -1,19 +1,22 @@
 $(function () {
+    //HIDE CONTENT AND HEADER ANIMATION
     $('#smaller1').hide();
     $('#name').hide();
     $('#smaller2').hide();
-    $('#smaller1').fadeIn(1500);
-    setTimeout(function(){
-        $('#name').fadeIn(1500);
-        setTimeout(function(){
-            $('#smaller2').show("drop", {direction: 'down'}, 1500);
-        }, 1500);
-    }, 1500);
+    $('#project-info').hide();
     
+    $('#smaller1').fadeIn(1000);
+    setTimeout(function(){
+        $('#name').fadeIn(1000);
+        setTimeout(function(){
+            $('#smaller2').show("drop", {direction: 'down'}, 1000);
+        }, 1000);
+    }, 1000);
     
     $('.contact-thumb').hide();
     $('.message').hide();
     
+    //SHOW CONTACT INFO ON HOVER
     function showContact (hover, show, img) {
         
         var $hover = $(hover);
@@ -34,23 +37,51 @@ $(function () {
     showContact('#icon2', '#msg2', '#ct2');
     showContact('#icon3', '#msg3', '#ct3');
     showContact('#icon4', '#msg4', '#ct4');
-
     
-    function changeAbout(link, show, image, color) {
+    //ABOUT ME AND PROJECT "LINK"
+    
+    function aboutToggle(link, content) {
         var $link = $(link);
-        var $show = $(show);
+        var $content = $(content);
+        
+        console.log($link);
+        console.log($content);
         
         $link.click(function(){
+            $('.about-content').hide();
+            $content.fadeIn();
+                    
+        });
+        
+    }
+  
+    aboutToggle('#about1', '#my-info');
+    aboutToggle('#about2', '#project-info');
+    
+    
+    
+    //CHANGE BG ON PROJECT LINK HOVER
+    function changeBG(link, image) {
+        var $link = $(link);
+        
+        $link.mouseover(function(){
             $('#about').css('background-image', "url('" + image + "')");
-            $('.about-nav li').css('color', color);         
+            $('#skills').css('background-image', "url('img/languagesr.png')");
+            $('.about-nav li').css('color', '#000000');
+            
+            
+            $link.mouseleave(function(){
+                $('#about').css('background-image', "url('img/background-test.jpg')");
+                $('.about-nav li').css('color', '#ffffff');
+                $('#skills').css('background-image', "url('img/languages.png')");
+                
+            });
 
         });
     }
     
-    changeAbout('#about1', 'show', 'img/background-test.jpg', '#ffffff');
-    changeAbout('#about2', 'show', 'img/dpwedding-bg.jpg', '#000000');
-    changeAbout('#about3', 'show', 'img/swagwise-bg.jpg', '#000000');
-    
+    changeBG('#dp-wedding a', 'img/dpwedding-bg.jpg');
+    changeBG('#swagwise a', 'img/swagwise-bg.jpg');
     
 });
 
