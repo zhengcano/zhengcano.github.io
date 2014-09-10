@@ -12,8 +12,8 @@ $(function () {
             $show.fadeIn(500);
             $img.fadeIn(500);
             $hover.mouseleave(function (){
-                $show.hide();
-                $img.hide();
+                $('.message').hide();
+                $('.contact-thumb').hide();
             });
         });
     }
