@@ -13,17 +13,27 @@ $(document).ready(function(){
         });
     });
     
+    //scroll function for skills img
+     var $bgobj = $('#skills'); // assigning the object
+        $window.scroll(function() {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+            // Put together our final background position
+            var coords = '85% '+ yPos + 'px';
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+        });
+    
     //Bind about menu to scroll
     $(document).bind('scroll', function(){
-        var link = $('.about-nav li');
+        var link = $('#about-wrapper');
         var scroll = $window.scrollTop();
        $window.scroll(function(){
-            if( scroll >= 700 && scroll <= 1020 ) {
-            link.css('opacity', 0.8/(320/(scroll - 700) ) );
+            if( scroll >= 630 && scroll <= 1020 ) {
+            link.css('opacity', 0.9/(390/(scroll - 630) ) );
         } else if (scroll < 700) {
             link.css('opacity', 0);
         } else {
-            link.css('opacity', 0.8);
+            link.css('opacity', 0.9);
         }
        });
     });
@@ -68,7 +78,7 @@ $(document).ready(function(){
     
         
     $(document).bind('scroll', function(){
-        var link = $('article div');
+        var link = $('#head article div');
         var scroll = $window.scrollTop();
        $window.scroll(function(){
             if( scroll >= 200 && scroll <= 700 ) {

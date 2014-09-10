@@ -1,4 +1,16 @@
 $(function () {
+    $('#smaller1').hide();
+    $('#name').hide();
+    $('#smaller2').hide();
+    $('#smaller1').fadeIn(1500);
+    setTimeout(function(){
+        $('#name').fadeIn(1500);
+        setTimeout(function(){
+            $('#smaller2').show("drop", {direction: 'down'}, 1500);
+        }, 1500);
+    }, 1500);
+    
+    
     $('.contact-thumb').hide();
     $('.message').hide();
     
@@ -35,9 +47,9 @@ $(function () {
         });
     }
     
-    changeAbout('#about1', 'show', 'img/background-test.jpg', '#e1e1e4');
-    changeAbout('#about2', 'show', 'img/dpwedding-bg.jpg', 'black');
-    changeAbout('#about3', 'show', 'img/swagwise-bg.jpg', 'black');
+    changeAbout('#about1', 'show', 'img/background-test.jpg', '#ffffff');
+    changeAbout('#about2', 'show', 'img/dpwedding-bg.jpg', '#000000');
+    changeAbout('#about3', 'show', 'img/swagwise-bg.jpg', '#000000');
     
     
 });

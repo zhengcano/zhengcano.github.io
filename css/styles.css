@@ -115,29 +115,40 @@ a:link, a:hover, a:active, a:visited {
     align-items: center;
 }
 
+#head .spacer {
+    -webkit-box-flex: 5;
+    -webkit-flex: 5;
+    -ms-flex: 5;
+    flex: 5;
+}
+
 #head article { 
+    -webkit-box-flex: 11; 
+    -webkit-flex: 11; 
+    -ms-flex: 11; 
+    flex: 11;
 	color: white;
 	font-size: 6em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
+    -webkit-box-align: start;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
 }
 
-.name {
+#name {
     text-align: center;
     min-height: 170px; 
     display: -webkit-box; 
@@ -164,18 +175,15 @@ a:link, a:hover, a:active, a:visited {
 	background: url('../img/background-test.jpg') 50% 0 fixed;
 	min-height: 800px; 
 	height: 800px; 
-    padding-top: 70px;
 }
  
 #about article { 
-	position: absolute; 
-	text-align: center; 
-	top: 500px; 
-	width: 100%; 
-	font-size: 4em;
+    margin-top: 30px;
+    font-family: 'Shadows Into Light Two', cursive;
 }
 
 .about-nav {
+    padding-top: 70px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -185,12 +193,13 @@ a:link, a:hover, a:active, a:visited {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
 }
 
 .about-nav li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     height: 70px;
     font-size: 2em;
     display: -webkit-box;
@@ -205,7 +214,7 @@ a:link, a:hover, a:active, a:visited {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #e1e1e4;
+    color: #ffffff;
     -webkit-transition: font-size 500ms ease-in-out;
     transition: font-size 500ms ease-in-out; 
 }
@@ -214,7 +223,42 @@ a:link, a:hover, a:active, a:visited {
     cursor: pointer;
     font-size: 2.5em;
 }
- 
+
+.about-content {
+    margin-left: 40px;
+}
+
+#about-me {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+#my-info {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#skills {
+    width: 199%;
+    position: relative;
+    background: url('../img/languages.png') 50% 100% no-repeat fixed;
+    height: 630px;
+    min-height: 630px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
 #contact { 
     border-top: 5px solid #454545;
 	background: url('../img/contact-bg.png') 50% 100% repeat-x fixed;

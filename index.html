@@ -13,11 +13,13 @@
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/scroll.js"></script>
 	<script src="js/links.js"></script>
 
 </head>
 <body>
+    <!-- Language Option, may impliment later
     <div id="language-background"></div>
     <div class="language-bar">
         <ul class="language-list">
@@ -25,25 +27,39 @@
             <li class="language">日本語</li>
             <li class="language">中文</li>
         </ul>
-    </div>
-	<section id="head" data-type="background" data-speed="3" class="pages">   
+    </div
+    -->
+	<section id="head" data-type="background" data-speed="3" class="pages">
+	    <div class="spacer"></div>   
 		<article>
-            <div class="smaller">Hi, my name is</div>
-		    <div class="name">Robert Zheng</div>
-		    <div class="smaller">and I'm a web designer</div>
+            <div id="smaller1" class="smaller">Hi, my name is</div>
+		    <div id="name">Robert Zheng</div>
+		    <div id="smaller2" class="smaller">and I'm a web developer</div>
 		</article>
-		<div id="about-me">
-		    <div id="my-info"></div>
-		    <div id="skills"></div>
-		</div>
+
 	</section>
 
-	<section id="about" data-type="background" data-speed="7" class="pages">     
-		<ul class="about-nav">
-		    <li id="about1" class="about-btn">About Me</li>
-		    <li id="about2" class="about-btn">Project : &nbsp;Wedding</li>
-		    <li id="about3" class="about-btn">Project : &nbsp;Swagwise</li>
-		</ul>
+	<section id="about" data-type="background" data-speed="7" class="pages">   
+	    <div id="about-wrapper">
+            <ul class="about-nav">
+                <li id="about1" class="about-btn">About Me</li>
+                <li id="about2" class="about-btn">Projects</li>
+            </ul>
+
+            <article>
+                <div id="about-me">
+                    <div id="my-info">
+
+                    </div>
+                    <section id="skills" data-type="skills" data-speed="2">
+
+                    </section> 
+                </div>
+                <div id="#project-info" class="about-content">
+
+                </div>
+            </article>
+		</div>
 	</section>
 
 	<section id="contact" class="pages">
