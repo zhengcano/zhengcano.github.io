@@ -104,6 +104,10 @@ $(document).ready(function(){
     $window.resize(function(){
         scrollability();
     })
+    
+    $('#contact-scroll').click(function(){
+        $('html, body').animate({scrollTop: 1681}, 500);
+    })
 
     
     
