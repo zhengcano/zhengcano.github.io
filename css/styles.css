@@ -73,9 +73,14 @@ a:link, a:hover, a:active, a:visited {
     -ms-flex-align: center;
     align-items: center;
     border-right: 1px solid #999999;
+    -webkit-transition: background-color 200ms ease-in-out;
+    transition: background-color 200ms ease-in-out;
+    font-family: 'Shadows Into Light Two', cursive;
 }
 
 .language:hover {
+    color: #DDDDDD;
+    background-color: #333333;
     cursor: pointer;
 }
 
@@ -207,7 +212,7 @@ a:link, a:hover, a:active, a:visited {
 
 .about-nav li:hover {
     cursor: pointer;
-    font-size: 2.2em;
+    font-size: 2.5em;
 }
  
 #contact { 
