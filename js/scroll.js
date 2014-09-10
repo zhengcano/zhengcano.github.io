@@ -1,30 +1,43 @@
 $(document).ready(function(){
 
     var $window = $(window);
-
-    $('section[data-type="background"]').each(function(){
-        var $bgobj = $(this); // assigning the object
-        $window.scroll(function() {
-            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-            // Put together our final background position
-            var coords = '50% '+ yPos + 'px';
-        // Move the background
-        $bgobj.css({ backgroundPosition: coords });
-        });
-    });
     
-    //scroll function for skills img
-     var $bgobj = $('#skills'); // assigning the object
-        $window.scroll(function() {
-            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-            // Put together our final background position
-            var coords = '85% '+ yPos + 'px';
-        // Move the background
-        $bgobj.css({ backgroundPosition: coords });
-        });
+    function parallax () {
+        var winWidth = $window.width();
+
+        //PARALLAX SCROLLING ON COMPUTERS ONLY
+        if (winWidth >= 992) {
+            $('section[data-type="background"]').each(function(){
+                var $bgobj = $(this); // assigning the object
+                $window.scroll(function() {
+                    var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+                    // Put together our final background position
+                    var coords = '50% '+ yPos + 'px';
+                // Move the background
+                $bgobj.css({ backgroundPosition: coords });
+                });
+            });
+
+            //scroll function for skills img
+             var $bgobj = $('#skills'); // assigning the object
+                $window.scroll(function() {
+                    var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+                    // Put together our final background position
+                    var coords = '85% '+ yPos + 'px';
+                // Move the background
+                $bgobj.css({ backgroundPosition: coords });
+                });
+        }
+    }
+    
+    parallax();
+    $window.resize(function(){
+        parallax();
+    })
+    
     
     //Bind about menu to scroll
-    $(document).bind('scroll', function(){
+    $(document).bind('scroll', function() {
         var link = $('#about-wrapper');
         var scroll = $window.scrollTop();
        $window.scroll(function(){
@@ -56,6 +69,7 @@ $(document).ready(function(){
             }
         });
     });
+    
     
     $(document).bind('scroll', function () {
         var link = $('#contact-content');
