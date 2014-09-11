@@ -179,8 +179,8 @@ a:link, a:hover, a:active, a:visited {
 	background: url('../img/background-test.jpg') 50% 0 fixed;
 	min-height: 800px; 
 	height: 800px; 
-    -webkit-transition: background-image 500ms ease-in-out; 
-    transition: background-image 500ms ease-in-out;
+    -webkit-transition: background-image 300ms ease-in-out; 
+    transition: background-image 300ms ease-in-out;
 }
  
 #about article { 
