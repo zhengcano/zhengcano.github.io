@@ -27,9 +27,9 @@ $(document).ready(function(){
                 $window.scroll(function () {
                     var yPos = -($window.scrollTop() / $bgobj.data('speed'));
                     // Put together our final background position
-                    if ($window > 1264) {
+                    if ($window.width() >= 1264) {
                         var coords = '85% '+ yPos + 'px';
-                    } else if ($window > 1160) {
+                    } else if ($window.width() >= 1160) {
                         var coords = '90% '+ yPos + 'px';
                     } else {
                         var coords = '95% '+ yPos + 'px';
