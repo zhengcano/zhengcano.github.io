@@ -21,7 +21,7 @@ ul {
 a:link, a:hover, a:active, a:visited {
     text-decoration: none;
 }
-
+/*
 #language-background {
     right: 0;
     position: fixed;
@@ -83,13 +83,15 @@ a:link, a:hover, a:active, a:visited {
     background-color: #333333;
     cursor: pointer;
 }
-
+*/
 .pages {
     margin: 0 auto;
     width: 100%;
     max-width: 1920px;
     position: relative;
 }
+
+/* ============================== HEAD SECTION ====================================== */
 
 #head { 
     padding-bottom: 100px;
@@ -167,14 +169,18 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .smaller {
-    font-size: 4.5rem;
+    font-size: 4rem;
     text-align: center;
 }
+
+/* ============================== ABOUT SECTION ====================================== */
 
 #about { 
 	background: url('../img/background-test.jpg') 50% 0 fixed;
 	min-height: 800px; 
 	height: 800px; 
+    -webkit-transition: background-image 500ms ease-in-out; 
+    transition: background-image 500ms ease-in-out;
 }
  
 #about article { 
@@ -202,7 +208,7 @@ a:link, a:hover, a:active, a:visited {
     -ms-flex: 1;
     flex: 1;
     height: 70px;
-    font-size: 2.5em;
+    font-size: 2em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -220,13 +226,7 @@ a:link, a:hover, a:active, a:visited {
     transition: font-size 500ms ease-in-out; 
 }
 
-.about-nav li:hover {
-    cursor: pointer;
-    font-size: 3em;
-}
-
 .about-content {
-    margin-left: 40px;
     height: 630px;
     font-size: 1.5rem;
 }
@@ -258,7 +258,7 @@ a:link, a:hover, a:active, a:visited {
     -ms-flex-direction: column;
     flex-direction: column;
     padding-top: 50px;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 #my-info ul {
@@ -266,7 +266,7 @@ a:link, a:hover, a:active, a:visited {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 #my-info ul a {
@@ -288,12 +288,8 @@ a:link, a:hover, a:active, a:visited {
     flex-direction: row;
 }
 
-#contact-scroll:hover {
-    cursor: pointer;
-}
-
 #my-info ul h4 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 5px;
 }
 
@@ -302,7 +298,6 @@ a:link, a:hover, a:active, a:visited {
 }
 
 #project-info {
-    padding-top: 50px;
      -webkit-box-flex: 1;
      -webkit-flex: 1;
      -ms-flex: 1;
@@ -316,6 +311,8 @@ a:link, a:hover, a:active, a:visited {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    padding-bottom: 100px;
+    font-size: 1.3em;
 }
 
 #site-logo {
@@ -395,10 +392,6 @@ a:link, a:hover, a:active, a:visited {
     transition: color 500ms ease-in-out;
 }
 
-.slink a:hover {
-    color: #000000;
-}
-
 .title-date {
     width: 100%;
     display: -webkit-box;
@@ -451,9 +444,11 @@ a:link, a:hover, a:active, a:visited {
     flex: 1;
 }
 
+/* ============================== CONTACT SECTION ====================================== */
+
 #contact { 
     border-top: 5px solid #454545;
-	background: url('../img/contact-bg.png') 50% 100% repeat-x fixed;
+	background: url('../img/contact-bg.png') 60% 100% repeat-x fixed;
 	min-height: 700px; 
 	height: 700px; 
     padding-top: 30px;
@@ -497,24 +492,33 @@ a:link, a:hover, a:active, a:visited {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .icon {
     font-size: 1.5rem;
-    -webkit-transition: opacity 500ms ease-in-out;
-    transition: opacity 500ms ease-in-out;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
-.icon:hover {
-    opacity: 0.5;
+.mobile-text {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 1.3em;
+    margin-left: 20px;
 }
 
 #icon1 a{
@@ -533,38 +537,333 @@ a:link, a:hover, a:active, a:visited {
     color: #4F93FF;
 }
 
-#contact-images{
-    opacity: 0.7;
-    margin-top: 5px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+/* ========================== HIDE SKILLS IN MOBILE ================================== */
+
+@media (max-width: 991px) {
+    
+    #head {
+        padding-bottom: 150px;
+    }
+    
+    #skills {
+        display: none;
+    }
+    
+    #contact h2 {
+        margin-left: 30px;
+    }
+    
+    #contact-content {
+        margin-left: 30px;
+    }
+    
+    #contact-content a {
+        font-size: 1.1em;
+    }
+    
+}
+/* ========================== 320px ================================== */
+@media (max-width: 479px) {
+    #head {
+        background: url('../img/front-img-320.jpg') 50% 0 fixed;
+        min-height: 480px; 
+        height: 480px; 
+        padding-bottom: 0;
+    }
+    
+    #name {
+        font-size: 2rem;
+        min-height: 50px;
+    }
+    .smaller {
+        font-size: 1.7rem;
+    }
+    .fa-ul {
+        margin-left: 0.8em !important;
+    }
+    #about {
+        min-height: 480px;
+        height: 480px;
+        
+    }
+    .about-nav li {
+        font-size: 1.3em;
+    }
+    
+    #my-info {
+        font-size: 0.8em;
+        padding-top: 10px;
+    }
+    .ul-wrapper:first-child {
+        margin-bottom: 10px;
+    }
+    #project-info {
+        font-size: 1.1em;
+        padding-top: 10px;
+        height: 370px;
+    }
+    #site-logo {
+        display: none;
+    }
+    
+    #contact-content a {
+        font-size: 0.8em;
+    }
+    
+    #contact h2 {
+        font-size: 2em;
+    }
+    
+    #contact {
+        background: url('../img/contact-bg-320.png') 50% 100% repeat-x fixed;
+        min-height: 480px;
+        height: 480px;
+    }
+    
+    #contact a {
+        font-size: 0.5em;
+    }
+    .mobile-text {
+        font-size: 0.8em;
+    }
 }
 
-#hidden-message {
-    text-align: center;
-    padding-top: 30px;
-    font-size: 2.5em;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+/* ========================== 480px ================================== */
+@media (min-width: 480px) {
+    
+    #head {
+        background: url('../img/front-img-480.jpg') 50% 0 fixed;
+        min-height: 800px; 
+        height: 800px; 
+        padding-bottom: 0;
+    }
+    
+    #name {
+        font-size: 3rem;
+        min-height: 75px;
+    }
+    .smaller {
+        font-size: 2.3rem;
+    }
+    .fa-ul {
+        margin-left: 1em !important;
+    }
+    .about-nav li {
+        font-size: 1.8em;
+    }
+    
+    #my-info {
+        font-size: 1.1em;
+    }
+    #project-info {
+        font-size: 1.1em;
+    }
+    
+    #contact-content a {
+        font-size: 0.8em;
+    }
+    
+    #contact h2 {
+        font-size: 2.5em;
+    }
+    
+    #contact {
+        background: url('../img/contact-bg-480.png') 50% 100% repeat-x fixed;
+    }
+}
+
+/* ========================== 540px ================================== */
+@media (min-width: 540px) {
+    #head { 
+        background: url('../img/front-img-640.jpg') 50% 0 fixed;
+        min-height: 960px; 
+        height: 960px; 
+    }
+    
+    #name {
+        font-size: 3.4rem;
+        min-height: 90px;
+    }
+    
+    .smaller {
+        font-size: 2.7rem;
+    }
+    
+    #contact {
+        background: url('../img/contact-bg-640.png') 50% 100% repeat-x fixed;
+    }
+    
+    #contact h2 {
+        font-size: 3.5em;
+    }
+    
+}
+
+/* ========================== 640px ================================== */
+@media (min-width: 640px) {
+    #name {
+        font-size: 4rem;
+    }
+    .smaller {
+        font-size: 3rem;
+    }
+}
+
+
+/* ========================== 720px ================================== */
+@media (min-width: 720px) {
+    
+    .about-nav li {
+        font-size: 2.5em;
+    }
+
+    #head {
+        background: url('../img/front-img.jpg') 55% 0 fixed;
+    }
+    
+    #name {
+        font-size: 4.8rem;
+        min-height: 130px;
+    }
+    .smaller {
+        font-size: 3.9rem;
+    }
+    
+    #my-info {
+        font-size: 1.5em;
+    }
+    
+    #project-info a {
+        font-size: 1.2em;
+    }
+    
+    #contact {
+        background: url('../img/contact-bg.png') 65% 100% repeat-x fixed;
+    }
+}
+
+/* ============================== 992 px ====================================== */
+@media (min-width: 992px) {
+    .mobile-text {
+        display: none;
+    }
+    
+    .slink a:hover {
+        color: #000000;
+    }
+    
+    #contact-scroll:hover {
+        cursor: pointer;
+    }
+    
+    .about-nav li:hover {
+        cursor: pointer;
+        font-size: 3em;
+    }
+    
+    .icon {
+        -webkit-transition: opacity 500ms ease-in-out;
+        transition: opacity 500ms ease-in-out;
+    }
+    
+    .icon:hover {
+        opacity: 0.5;
+    }
+    
+    #icon-wrapper {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    
+    #contact-images{
+        opacity: 0.7;
+        margin-top: 5px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    #hidden-message {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 2.5em;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+}
+
+/* ============================== 1100 px ====================================== */
+@media (min-width: 1100px) {
+    
+    .smaller {
+        font-size: 4.5rem;
+    }
+    
+    #contact {
+        background: url('../img/contact-bg.png') 50% 100% repeat-x fixed;
+    }
+    
+}
+
+/* ============================== 1200 px ====================================== */
+@media (min-width: 1200px) {
+    
+    #my-info {
+        margin-left: 40px;
+    }
+    
+    #project-info {
+        margin-left: 40px;
+        font-size: 1.4em;
+    }
+    
+    #icon-wrapper a {
+        font-size: 1.2em;
+    }
+    
+}
+
+/* ============================== 1264 px ====================================== */
+@media (min-width: 1264px) {
+    
+    #my-info {
+        font-size: 1.5em;
+    }
+    
+}
+
+/* ============================== 1350+ px ====================================== */
+@media (min-width: 1350px) {
+    
+    #my-info ul h4 {
+        font-size: 1.2em;
+    }
+    
 }

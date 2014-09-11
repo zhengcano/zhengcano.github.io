@@ -12,7 +12,11 @@ $(document).ready(function(){
                 $window.scroll(function () {
                     var yPos = -($window.scrollTop() / $bgobj.data('speed'));
                     // Put together our final background position
-                    var coords = '50% '+ yPos + 'px';
+                    if ($window > 1150) {
+                        var coords = '50% '+ yPos + 'px';
+                    } else {
+                        var coords = '60% '+ yPos + 'px';
+                    }
                 // Move the background
                 $bgobj.css({ backgroundPosition: coords });
                 });
@@ -23,7 +27,13 @@ $(document).ready(function(){
                 $window.scroll(function () {
                     var yPos = -($window.scrollTop() / $bgobj.data('speed'));
                     // Put together our final background position
-                    var coords = '85% '+ yPos + 'px';
+                    if ($window > 1264) {
+                        var coords = '85% '+ yPos + 'px';
+                    } else if ($window > 1160) {
+                        var coords = '90% '+ yPos + 'px';
+                    } else {
+                        var coords = '95% '+ yPos + 'px';
+                    }
                 // Move the background
                 $bgobj.css({ backgroundPosition: coords });
                 });

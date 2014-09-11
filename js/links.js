@@ -16,29 +16,7 @@ $(function () {
     $('.contact-thumb').hide();
     $('.message').hide();
     
-    //SHOW CONTACT INFO ON HOVER
-    function showContact (hover, show, img) {
-        
-        var $hover = $(hover);
-        var $show = $(show);
-        var $img = $(img);
-        
-        $hover.mouseover(function () {
-            $show.fadeIn(500);
-            $img.fadeIn(500);
-            $hover.mouseleave(function (){
-                $('.message').hide();
-                $('.contact-thumb').hide();
-            });
-        });
-    }
-    
-    showContact('#icon1', '#msg1', '#ct1');
-    showContact('#icon2', '#msg2', '#ct2');
-    showContact('#icon3', '#msg3', '#ct3');
-    showContact('#icon4', '#msg4', '#ct4');
-    
-    //ABOUT ME AND PROJECT "LINK"
+     //ABOUT ME AND PROJECT "LINK"
     
     function aboutToggle(link, content) {
         var $link = $(link);
@@ -60,9 +38,46 @@ $(function () {
     
     
     
+    //SHOW CONTACT INFO ON HOVER
+    function showContact (hover, show, img) {
+        
+        if ($(window).width() >= 992 ) {
+            var $hover = $(hover);
+            var $show = $(show);
+            var $img = $(img);
+
+            $hover.mouseover(function () {
+                $show.fadeIn(500);
+                $img.fadeIn(500);
+                $hover.mouseleave(function (){
+                    $('.message').hide();
+                    $('.contact-thumb').hide();
+                });
+            });
+        }
+    }
+    
+    showContact('#icon1', '#msg1', '#ct1');
+    showContact('#icon2', '#msg2', '#ct2');
+    showContact('#icon3', '#msg3', '#ct3');
+    showContact('#icon4', '#msg4', '#ct4');
+    
+    $(window).resize(function(){
+        
+        showContact('#icon1', '#msg1', '#ct1');
+        showContact('#icon2', '#msg2', '#ct2');
+        showContact('#icon3', '#msg3', '#ct3');
+        showContact('#icon4', '#msg4', '#ct4');
+        
+    });
+    
+   
+    
+    
     //CHANGE BG ON PROJECT LINK HOVER
     function changeBG(link, image) {
-        var $link = $(link);
+        if ($(window).width() >= 992) {
+            var $link = $(link);
         
         $link.mouseover(function(){
             $('#about').css('background-image', "url('" + image + "')");
@@ -78,10 +93,16 @@ $(function () {
             });
 
         });
+        }
     }
     
     changeBG('#dp-wedding a', 'img/dpwedding-bg.jpg');
     changeBG('#swagwise a', 'img/swagwise-bg.jpg');
+    
+    $(window).resize(function(){
+        changeBG('#dp-wedding a', 'img/dpwedding-bg.jpg');
+        changeBG('#swagwise a', 'img/swagwise-bg.jpg');
+    });
     
 });
 
