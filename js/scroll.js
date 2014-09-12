@@ -113,7 +113,7 @@ $(document).ready(function(){
     })
     
     $('#contact-scroll').click(function(){
-        $('html, body').animate({scrollTop: 1681}, 500);
+        $('html, body').animate({scrollTop: 2000}, 500);
     })
 });
 
