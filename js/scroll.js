@@ -72,7 +72,6 @@ $(document).ready(function(){
             });
         });
 
-
         $(document).bind('scroll', function () {
             var link = $('#contact-content');
             var scroll = $window.scrollTop();
@@ -90,8 +89,6 @@ $(document).ready(function(){
                 }
             });
         });
-
-
 
         $(document).bind('scroll', function(){
             var link = $('#head article div');
@@ -118,12 +115,8 @@ $(document).ready(function(){
     $('#contact-scroll').click(function(){
         $('html, body').animate({scrollTop: 1681}, 500);
     })
-
-    
-    
 });
 
-// Create HTML5 elements for IE
-                     
+// Create HTML5 elements for IE  
 document.createElement("article");
 document.createElement("section");

@@ -17,7 +17,6 @@ $(function () {
     $('.message').hide();
     
      //ABOUT ME AND PROJECT "LINK"
-    
     function aboutToggle(link, content) {
         var $link = $(link);
         var $content = $(content);
@@ -27,16 +26,12 @@ $(function () {
         
         $link.click(function(){
             $('.about-content').hide();
-            $content.fadeIn();
-                    
+            $content.fadeIn();   
         });
-        
     }
   
     aboutToggle('#about1', '#my-info');
     aboutToggle('#about2', '#project-info');
-    
-    
     
     //SHOW CONTACT INFO ON HOVER
     function showContact (hover, show, img) {
@@ -68,11 +63,7 @@ $(function () {
         showContact('#icon2', '#msg2', '#ct2');
         showContact('#icon3', '#msg3', '#ct3');
         showContact('#icon4', '#msg4', '#ct4');
-        
     });
-    
-   
-    
     
     //CHANGE BG ON PROJECT LINK HOVER
     function changeBG(link, link2, icon, image) {
@@ -88,7 +79,6 @@ $(function () {
             $link2.hide();
             $icon.css('opacity', '0');
             
-            
             $link.mouseleave(function(){
                 $('#about').css('background-image', "url('img/background-test.jpg')");
                 $('.about-nav li').css('color', '#ffffff');
@@ -97,7 +87,6 @@ $(function () {
                 $icon.css('opacity', 'inherit');
                 
             });
-
         });
         }
     }
@@ -113,7 +102,6 @@ $(function () {
 });
 
 //Preload Images
-
 $.fn.preload = function() {
     this.each(function(){
         $('<img/>')[0].src = this;
@@ -121,5 +109,4 @@ $.fn.preload = function() {
 }
 
 // Usage:
-
 $(['img/background-test.jpg','img/dpwedding-bg.jpg','img/swagwise-bg.jpg']).preload();
