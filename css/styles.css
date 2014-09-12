@@ -561,6 +561,10 @@ a:link, a:hover, a:active, a:visited {
         font-size: 1.1em;
     }
     
+    #site-links {
+        margin: 0 5px;
+    }
+    
 }
 /* ========================== 320px ================================== */
 @media (max-width: 479px) {
@@ -594,11 +598,15 @@ a:link, a:hover, a:active, a:visited {
         font-size: 0.8em;
         padding-top: 10px;
     }
+    
+    #my-info ul {
+        margin-bottom: 10px;
+    }
     .ul-wrapper:first-child {
         margin-bottom: 10px;
     }
     #project-info {
-        font-size: 1.1em;
+        font-size: 1em;
         padding-top: 10px;
         height: 370px;
     }
