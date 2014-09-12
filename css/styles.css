@@ -752,6 +752,11 @@ a:link, a:hover, a:active, a:visited {
 
 /* ============================== 992 px ====================================== */
 @media (min-width: 992px) {
+    .logo {
+        -webkit-transition: opacity 500ms ease-in-out;
+        transition: opacity 500ms ease-in-out;
+    }
+    
     .mobile-text {
         display: none;
     }

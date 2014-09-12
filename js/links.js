@@ -75,20 +75,26 @@ $(function () {
     
     
     //CHANGE BG ON PROJECT LINK HOVER
-    function changeBG(link, image) {
+    function changeBG(link, link2, icon, image) {
         if ($(window).width() >= 992) {
             var $link = $(link);
+            var $link2 = $(link2);
+            var $icon = $(icon);
         
         $link.mouseover(function(){
             $('#about').css('background-image', "url('" + image + "')");
             $('#skills').css('background-image', "url('img/languagesr.png')");
             $('.about-nav li').css('color', '#000000');
+            $link2.hide();
+            $icon.css('opacity', '0');
             
             
             $link.mouseleave(function(){
                 $('#about').css('background-image', "url('img/background-test.jpg')");
                 $('.about-nav li').css('color', '#ffffff');
                 $('#skills').css('background-image', "url('img/languages.png')");
+                $link2.fadeIn(500);
+                $icon.css('opacity', 'inherit');
                 
             });
 
@@ -96,8 +102,8 @@ $(function () {
         }
     }
     
-    changeBG('#dp-wedding a', 'img/dpwedding-bg.jpg');
-    changeBG('#swagwise a', 'img/swagwise-bg.jpg');
+    changeBG('#dp-wedding a', '#swagwise a', '#swag-icon', 'img/dpwedding-bg.jpg');
+    changeBG('#swagwise a', '#dp-wedding a', '#dp-icon', 'img/swagwise-bg.jpg');
     
     $(window).resize(function(){
         changeBG('#dp-wedding a', 'img/dpwedding-bg.jpg');
