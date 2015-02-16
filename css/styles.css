@@ -13,6 +13,11 @@ body {
     font-family: 'Rock Salt', cursive;
 }
 
+body:after {
+    display: none;
+    content: url(../img/dpwedding-bg.jpg) url(../img/swagwise-bg.jpg);
+}
+
 ul {
     list-style: none;
     margin: 0;
